@@ -1,0 +1,7 @@
+npm init -y
+
+npm install express mysql2 dotenv body-parser
+
+npm install --save-dev nodemon
+
+node app.js

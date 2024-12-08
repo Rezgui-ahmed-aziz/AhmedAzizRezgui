@@ -1,0 +1,48 @@
+I implemented the tests using postman.
+
+To test every functionality you can follow this pattern
+
+
+POST http://localhost:3000/tasks/ 
+with the body being a json file similar to this 
+{
+    "title": "hello",
+    "descrip": "hello",
+    "priority": "hi",
+    "category": "hi",
+    "due_date": "hi",
+    "completion_status": "hi"
+}
+
+
+Now our data base will have this element added.
+
+Then we can show our elements filtered by category OR due_date like this 
+
+GET http://localhost:3000/tasks/hi/hi
+
+then we can update the values of our element by using this command that takes a title (primary key) as a parameter
+
+PUT http://localhost:3000/tasks/hello
+with the body being a json file similar to this 
+{
+    "title": "hi",
+    "descrip": "instadeep test",
+    "priority": "low",
+    "category": "hi",
+    "due_date": "hi",
+    "completion_status": "hi"
+}
+
+now our element will be updated.
+
+Finaly to delete any element we can use this command, it takes the title of a task to delete it!
+
+DELETE http://localhost:3000/tasks/hi
+
+I also defined a function to retrieve an element by title, you can use it by doing this command
+
+GET http://localhost:3000/tasks/hi 
+
+(make sure to add another element first as following this usage guide will lead to an empty database up to this point)
+

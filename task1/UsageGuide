@@ -1,0 +1,2 @@
+To compile the file use : g++ -o task.exe task1.cpp
+To run the code : .\tesk.exe
